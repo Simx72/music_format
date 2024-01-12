@@ -17,12 +17,16 @@ fn main() {
     println!("from: {}\t| to: {}", from, to);
 
     // processing arguments
-    let cwd = env::current_dir().expect("Something ocurred when getting the current directory.");
+    let cwd = env::current_dir().expect("Error: Current directory does not exist or there are insufficient permissions to access it.");
 
     let from = cwd.join(from);
     let to = cwd.join(to);
 
-    println!("from: {}\t| to: {}", from.display(), to.display());
+    println!("from: {} \t| to: {}", from.display(), to.display());
+
+    
+
+
 
 
 }
