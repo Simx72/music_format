@@ -2,7 +2,7 @@ use std::env;
 
 
 fn main() {
-    
+    // getting arguments
     let args: Vec<String> = env::args().collect();
 
     if args.len() <= 1 {
@@ -16,7 +16,13 @@ fn main() {
     
     println!("from: {}\t| to: {}", from, to);
 
-    println!("the path of the file is: {}", from);
+    // processing arguments
+    let cwd = env::current_dir().expect("Something ocurred when getting the current directory.");
+
+    let from = cwd.join(from);
+    let to = cwd.join(to);
+
+    println!("from: {}\t| to: {}", from.display(), to.display());
 
 
 }
@@ -30,7 +36,7 @@ Usage:
     music_format [from] [to]
 
 Where:
-    from    the path of the file/s to be converted
+    from    the path of the file (or folder with files) to be converted
     to      the path where the converted will be saved to   
 ");
 }

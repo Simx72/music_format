@@ -1,4 +1,9 @@
 2024-01-12
+Ponerlo en funcionamiento
+
+* Check 'from' is a path
+
+2024-01-12
 Organización
 
 * added 'future.md'
