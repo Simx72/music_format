@@ -1,3 +1,8 @@
+2024-01-12
+Organización
+
+* added 'future.md'
+
 2024-01-11
 First try
 
